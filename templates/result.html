@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Sentiment based user recommendation system</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for user{{name}}</b></p>
+	<div class="results">
+
+
+		
+	{% if len >= 5%}
+		<ol>
+     <!-- For loop logic of jinja template -->
+     {%for i in range(0, 5)%}
+		<li>{{prediction[i]}}</li>
+     {%endfor%}
+
+      </ol>
+	{% elif len <= 5%}
+		<ol>
+     <!-- For loop logic of jinja template -->
+     {%for i in range(0, len)%}
+		<li>{{prediction[i]}}</li>
+     {%endfor%}
+
+      </ol>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
