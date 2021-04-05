@@ -19,6 +19,7 @@ itsdangerous==1.1.0
 Jinja2==2.11.3
 joblib==1.0.1
 jsonschema==3.2.0
+gunicorn
 MarkupSafe==1.1.1
 nltk==3.5
 numpy >=1.1.9
