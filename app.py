@@ -78,7 +78,7 @@ from tqdm import tqdm
 
 ## Warnings
 import warnings
-from scipy import stats
+#from scipy import stats
 warnings.filterwarnings('ignore')
 import pickle
 #from sklearn.feature_extraction.text import CountVectorizer
