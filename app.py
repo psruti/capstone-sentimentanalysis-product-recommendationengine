@@ -25,15 +25,15 @@ import itertools
 import gzip
 
 # Visualizations
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
-import seaborn as sns
-import matplotlib.colors as colors
+#import matplotlib.pyplot as plt
+#from matplotlib.colors import ListedColormap
+#import seaborn as sns
+#import matplotlib.colors as colors
 #%matplotlib inline
-from wordcloud import WordCloud, STOPWORDS
+#from wordcloud import WordCloud, STOPWORDS
 
 # Datetime
-from datetime import datetime
+#from datetime import datetime
 
 # text preprocessing
 import spacy
@@ -277,11 +277,11 @@ def predict():
 	# Item Similarity Matrix
 	item_correlation = 1 - pairwise_distances(df_subtracted.fillna(0), metric='cosine')
 	item_correlation[np.isnan(item_correlation)] = 0
-	print(item_correlation)
+	#print(item_correlation)
 	item_correlation[item_correlation < 0] = 0
 	item_predicted_ratings = np.dot((df_pivot.fillna(0).T), item_correlation)
-	print(item_predicted_ratings.shape)
-	print(dummy_train.shape)
+	#print(item_predicted_ratings.shape)
+	#print(dummy_train.shape)
 	# The final rating matrix used for finding the recommendation of users
 	item_final_rating = np.multiply(item_predicted_ratings, dummy_train)
 
