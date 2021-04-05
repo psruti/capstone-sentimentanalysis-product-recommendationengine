@@ -46,7 +46,7 @@ nbconvert
 nbformat
 nest-asyncio
 nltk==3.5
-numpy @ file:///C:/ci/numpy_and_numpy_base_1603466732592/work
+numpy >=1.1.9
 packaging==20.9
 pandas @ file:///C:/ci/pandas_1614711443373/work
 pandocfilters==1.4.3
