@@ -24,15 +24,6 @@ import itertools
 
 # Decompress the file
 import gzip
-
-# Visualizations
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
-import seaborn as sns
-import matplotlib.colors as colors
-%matplotlib inline
-from wordcloud import WordCloud, STOPWORDS
-
 # Datetime
 from datetime import datetime
 

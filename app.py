@@ -43,7 +43,6 @@ from nltk.stem import PorterStemmer, WordNetLemmatizer
 from nltk.tokenize import word_tokenize, sent_tokenize, regexp_tokenize
 from nltk.tokenize import RegexpTokenizer
 from nltk.tokenize.toktok import ToktokTokenizer
-import gensim
 import re
 
 
@@ -65,7 +64,6 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, HashingVectorizer
 from sklearn.pipeline import Pipeline
 from sklearn.naive_bayes import MultinomialNB
-#from catboost import CatBoostClassifier, Pool
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 from sklearn import metrics
@@ -76,11 +74,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import f1_score
 from sklearn.metrics import recall_score
-from gensim.models import Word2Vec
 from tqdm import tqdm
-import xgboost as xgb
-from xgboost import XGBClassifier
-#from sklearn.dummy import DummyClassifier
 
 ## Warnings
 import warnings
@@ -290,8 +284,6 @@ def predict():
 	print(dummy_train.shape)
 	# The final rating matrix used for finding the recommendation of users
 	item_final_rating = np.multiply(item_predicted_ratings, dummy_train)
-	print(type(item_final_rating))
-	print(item_final_rating.shape)
 
 
 
@@ -307,22 +299,6 @@ def predict():
 	y = df2['user_sentiment']
 	# Splitting Dataset into train and test set
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=42)
-
-	# Extract Feature With CountVectorizer
-	#cv = CountVectorizer()
-	#X = cv.fit_transform(X) # Fit the Data
-	#from sklearn.model_selection import train_test_split
-	#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42)
-	#Naive Bayes Classifier
-	#from sklearn.naive_bayes import MultinomialNB
-
-	#clf = MultinomialNB()
-	#clf.fit(X_train,y_train)
-	#clf.score(X_test,y_test)
-	#Alternative Usage of Saved Model
-	# joblib.dump(clf, 'NB_spam_model.pkl')
-	# NB_spam_model = open('NB_spam_model.pkl','rb')
-	# clf = joblib.load(NB_spam_model)
 
 	if request.method == 'POST':
 		message = request.form['message']
