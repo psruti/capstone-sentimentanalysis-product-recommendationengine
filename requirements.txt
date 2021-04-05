@@ -56,10 +56,6 @@ Pygments==2.8.1
 pyparsing==2.4.7
 pyrsistent==0.17.3
 python-dateutil>=2.5
-pytz
-pywinpty
-pyzmq
-qtconsole
 QtPy==1.9.0
 regex==2021.4.4
 requests==2.25.1
@@ -71,9 +67,6 @@ soupsieve==2.2.1
 spacy==3.0.5
 spacy-legacy==3.0.2
 srsly==2.4.0
-terminado
-testpath
-thinc
 threadpoolctl==2.1.0
 tornado==6.1
 tqdm==4.1.0
