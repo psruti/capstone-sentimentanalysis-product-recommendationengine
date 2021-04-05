@@ -42,7 +42,7 @@ mistune==0.8.4
 mkl-fft==1.0.6
 mkl-random==1.0.1
 mkl-service
-murmurhash=
+murmurhash
 nbclient
 nbconvert
 nbformat
